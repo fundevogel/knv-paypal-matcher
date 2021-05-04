@@ -64,6 +64,9 @@ def dedupe(duped_data, encoding='utf-8'):
 # PROCESSING #
 
 def convert_cost(string):
+    if isinstance(string, float):
+        string = str(string)
+
     string = float(string.replace(',', '.'))
     integer = f'{string:.2f}'
 
